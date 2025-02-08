@@ -18,7 +18,13 @@ def display_chat_messages():
             st.chat_message("assistant").markdown(message.content)
 
 async def main():
-    st.title("AI Content Generation Assistant")
+    # Create two columns for title and edit button
+    col1, col2 = st.columns([0.85, 0.15])
+    
+    with col1:
+        st.title("AI Content Generation Assistant")
+    with col2:
+        st.page_link("pages/1_Prompt_Editor.py", label="✏️ Edit Prompt", use_container_width=True)
     
     initialize_chat_state()
     display_chat_messages()
@@ -41,6 +47,8 @@ if __name__ == "__main__":
     st.set_page_config(
         page_title="AI Content Generation Assistant",
         page_icon="💬",
-        layout="wide"
+        layout="wide",
+        initial_sidebar_state="collapsed",
+        menu_items={}
     )
     asyncio.run(main())
