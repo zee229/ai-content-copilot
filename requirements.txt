@@ -1,0 +1,7 @@
+langchain==0.3.17
+openai==1.61.1
+langchain-community==0.3.16
+langchain-openai==0.3.4
+streamlit>=1.31.0
+youtube-search>=2.1.2
+playwright>=1.42.0
