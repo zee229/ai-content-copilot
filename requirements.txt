@@ -5,3 +5,4 @@ langchain-openai==0.3.4
 streamlit>=1.31.0
 youtube-search>=2.1.2
 playwright>=1.42.0
+duckduckgo-search==7.3.2
