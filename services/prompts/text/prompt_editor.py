@@ -3,7 +3,7 @@ import os
 
 
 def load_prompt():
-    prompt_path = os.path.join(os.path.dirname(__file__), 'agent_prompt.txt')
+    prompt_path = os.path.join(os.path.dirname(__file__), 'linkedin_agent_prompt.txt')
     try:
         with open(prompt_path, 'r', encoding='utf-8') as file:
             return file.read()
@@ -12,7 +12,7 @@ def load_prompt():
 
 
 def save_prompt(content):
-    prompt_path = os.path.join(os.path.dirname(__file__), 'agent_prompt.txt')
+    prompt_path = os.path.join(os.path.dirname(__file__), 'linkedin_agent_prompt.txt')
     with open(prompt_path, 'w', encoding='utf-8') as file:
         file.write(content)
 
