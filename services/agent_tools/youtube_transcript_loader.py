@@ -23,15 +23,14 @@ class AsyncYoutubeTranscriptLoader(BaseTool):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-    async def _arun(self, youtube_video_links: List[str]) -> List[str] | str:
+    async def _arun(self, youtube_video_links: List[str]) -> List[str]:
         try:
-            transcripts = get_transcripts(youtube_video_links)
+            from services.youtube.loader import get_transcripts_async
+            return await get_transcripts_async(youtube_video_links)
         except Exception as e:
-            return str(e)
-        return transcripts
+            return [f"Error: {str(e)}"]
 
     def _run(self, query: str) -> str:
-        """Run the tool synchronously."""
         raise NotImplementedError("This tool only supports async execution")
 
 
