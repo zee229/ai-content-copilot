@@ -27,7 +27,7 @@ A powerful Streamlit-based web application that serves as an AI content generati
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/zee229/ai-content-copilot
 cd content-generation-agent
 ```
 
