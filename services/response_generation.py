@@ -39,7 +39,7 @@ class LLMResponseGenerator:
         agent = create_tool_calling_agent(
             llm=llm,
             tools=self.tools,
-            prompt=prompt
+            prompt=prompt,
         )
 
         runnable = AgentExecutor.from_agent_and_tools(
@@ -58,4 +58,5 @@ class LLMResponseGenerator:
 
 
 async def generate_response(user_query: str, chat_history: List[AIMessage | HumanMessage]) -> str:
+    print(agent_prompt)
     return await LLMResponseGenerator().generate_response(user_query, chat_history=chat_history, prompt=agent_prompt)
