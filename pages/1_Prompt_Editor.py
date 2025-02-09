@@ -1,18 +1,21 @@
 import streamlit as st
 import os
 
+
 def load_prompt():
-    prompt_path = os.path.join('services', 'prompts', 'text', 'agent_prompt.txt')
+    prompt_path = os.path.join('services', 'prompts', 'text', 'linkedin_agent_prompt.txt')
     try:
         with open(prompt_path, 'r', encoding='utf-8') as file:
             return file.read()
     except FileNotFoundError:
         return ""
 
+
 def save_prompt(content):
-    prompt_path = os.path.join('services', 'prompts', 'text', 'agent_prompt.txt')
+    prompt_path = os.path.join('services', 'prompts', 'text', 'linkedin_agent_prompt.txt')
     with open(prompt_path, 'w', encoding='utf-8') as file:
         file.write(content)
+
 
 st.set_page_config(
     page_title="Prompt Editor",
