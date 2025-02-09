@@ -2,14 +2,10 @@ import os
 import json
 from typing import List, Optional
 
-print("Initializing prompt_manager module")
 
 # Constants
 PROMPTS_DIR = os.path.join(os.path.dirname(__file__), 'prompts')
 CONFIG_FILE = os.path.join(os.path.dirname(__file__), 'config.json')
-
-print(f"PROMPTS_DIR: {PROMPTS_DIR}")
-print(f"CONFIG_FILE: {CONFIG_FILE}")
 
 # Ensure prompts directory exists
 os.makedirs(PROMPTS_DIR, exist_ok=True)
@@ -25,7 +21,6 @@ def get_all_prompts() -> List[str]:
     for file in os.listdir(PROMPTS_DIR):
         if file.endswith('.txt') and not file.startswith('.'):
             prompts.append(os.path.splitext(file)[0])
-    print(f"Found prompts: {prompts}")
     return sorted(prompts)
 
 
@@ -39,7 +34,6 @@ def get_current_prompt() -> Optional[str]:
         with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
             config = json.load(f)
             current = config.get('current_prompt')
-            print(f"Current prompt from config: {current}")
             return current
     except (json.JSONDecodeError, FileNotFoundError) as e:
         print(f"Error reading config: {e}")
@@ -49,7 +43,6 @@ def get_current_prompt() -> Optional[str]:
 def set_current_prompt(name: str) -> None:
     """Sets current prompt in config"""
     config = {'current_prompt': name}
-    print(f"Setting current prompt to: {name}")
     with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
         json.dump(config, f, indent=2)
 
@@ -61,11 +54,9 @@ def load_prompt(name: str) -> Optional[str]:
         return None
 
     file_path = os.path.join(PROMPTS_DIR, f"{name}.txt")
-    print(f"Loading prompt from: {file_path}")
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-            print(f"Loaded content length: {len(content)}")
             return content
     except FileNotFoundError:
         print(f"Prompt file not found: {file_path}")
@@ -81,10 +72,8 @@ def save_prompt(name: str, content: str) -> None:
     os.makedirs(PROMPTS_DIR, exist_ok=True)
 
     file_path = os.path.join(PROMPTS_DIR, f"{name}.txt")
-    print(f"Saving prompt to: {file_path}")
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(content)
-    print(f"Saved content length: {len(content)}")
 
 
 def delete_prompt(name: str) -> bool:

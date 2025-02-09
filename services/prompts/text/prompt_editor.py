@@ -6,11 +6,9 @@ def load_file_directly(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-            print(f"DEBUG: Loaded content length: {len(content)}")
-            print(f"DEBUG: First 100 chars: {content[:100]}")
             return content
     except Exception as e:
-        print(f"DEBUG: Error loading file: {e}")
+        print(f"Error loading file: {e}")
         return None
 
 def main():
