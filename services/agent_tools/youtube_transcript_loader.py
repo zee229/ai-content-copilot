@@ -1,7 +1,7 @@
 from langchain_core.tools import BaseTool
 from pydantic import BaseModel, Field
 from typing import List
-from services.youtube.loader import get_transcripts
+from services.youtube.loader import get_transcripts_async
 
 
 class YoutubeTranscriptLoaderArgs(BaseModel):
