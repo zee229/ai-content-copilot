@@ -5,11 +5,12 @@ from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.tools import BaseTool
 from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
+import os
+from dotenv import load_dotenv
 
 from services.agent_tools import toolkit
-from services.utils.text_splitter import ensure_context_length, count_tokens, get_model_config
-
-from dotenv import load_dotenv
+from services.utils.text_splitter import ensure_context_length, get_model_config
 
 from services.prompts import agent_prompt
 
@@ -59,10 +60,16 @@ class LLMResponseGenerator:
             )
         
         # Initialize LLM with appropriate parameters
-        llm = ChatOpenAI(
-            model_name=self.model_name,
-            max_tokens=self.model_config["max_output_tokens"]
-        )
+        if "claude" in self.model_name:
+            llm = ChatAnthropic(
+                model_name=self.model_name,
+                api_key=os.getenv("ANTHROPIC_API_KEY")
+            )
+        else:
+            llm = ChatOpenAI(
+                model_name=self.model_name,
+                api_key=os.getenv("OPENAI_API_KEY")
+            )
 
         # Prepare input for the agent
         input_dict = {
@@ -86,6 +93,8 @@ class LLMResponseGenerator:
 
         try:
             response = await runnable.ainvoke(input_dict)
+            if "claude" in self.model_name:
+                return response.get("output", {})[0].get("text", "I apologize, but I was unable to generate a response.")
             return response.get("output", "I apologize, but I was unable to generate a response.")
         except Exception as e:
             error_msg = str(e)

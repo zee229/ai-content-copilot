@@ -4,6 +4,7 @@ from typing import List, Optional
 
 CONFIG_FILE = os.path.join(os.path.dirname(__file__), 'config.json')
 
+
 def get_available_models() -> List[str]:
     """Returns list of available models"""
     if not os.path.exists(CONFIG_FILE):
@@ -16,6 +17,7 @@ def get_available_models() -> List[str]:
     except (json.JSONDecodeError, FileNotFoundError):
         return []
 
+
 def get_current_model() -> str:
     """Returns currently selected model from config"""
     if not os.path.exists(CONFIG_FILE):
@@ -27,6 +29,7 @@ def get_current_model() -> str:
             return config.get('model_config', {}).get('current_model', "gpt-4o")
     except (json.JSONDecodeError, FileNotFoundError):
         return "gpt-4o"
+
 
 def set_current_model(model_name: str) -> None:
     """Sets current model in config"""

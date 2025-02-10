@@ -1,6 +1,6 @@
 from langchain_core.tools import BaseTool
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Union
 from services.youtube.loader import get_transcripts_async
 from services.utils.summarizer import summarize_long_text
 from services.utils.text_splitter import count_tokens, get_model_config
@@ -9,7 +9,7 @@ from services.prompts.text.model_manager import get_current_model
 
 class YoutubeTranscriptLoaderArgs(BaseModel):
     """Arguments for loading YouTube video transcripts."""
-    youtube_video_links: List[str] = Field(
+    youtube_video_links: Union[List[str], str] = Field(
         ...,
         description="The youtube video links for the transcript loading. Make sure "
                    "that their format is correct. Links should contain `watch?v=` "
@@ -29,11 +29,11 @@ class AsyncYoutubeTranscriptLoader(BaseTool):
     description: str = "Use this tool to load transcript from youtube videos"
     args_schema: type[BaseModel] = YoutubeTranscriptLoaderArgs
 
-    async def _arun(self, youtube_video_links: List[str]) -> List[str]:
+    async def _arun(self, youtube_video_links: Union[List[str], str]) -> List[str]:
         """Asynchronously load and process YouTube video transcripts.
         
         Args:
-            youtube_video_links: List of YouTube video URLs to process
+            youtube_video_links: List of YouTube video URLs or a single URL to process
             
         Returns:
             List of processed transcripts. Each transcript may be summarized
@@ -44,6 +44,10 @@ class AsyncYoutubeTranscriptLoader(BaseTool):
             indicating this fact.
         """
         try:
+            # Convert single string to list if necessary
+            if isinstance(youtube_video_links, str):
+                youtube_video_links = [youtube_video_links]
+                
             # Get current model and its configuration
             model_name = get_current_model()
             model_config = get_model_config(model_name)

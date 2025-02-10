@@ -2,6 +2,7 @@ import streamlit as st
 import os
 from services.prompts.text import prompt_manager
 
+
 def load_file_directly(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -10,6 +11,7 @@ def load_file_directly(file_path):
     except Exception as e:
         print(f"Error loading file: {e}")
         return None
+
 
 def main():
     st.title("Agent Prompt Editor")
@@ -20,13 +22,14 @@ def main():
     # Create two columns - sidebar for prompt list and main area for editing
     prompts = prompt_manager.get_all_prompts()
     current_prompt = prompt_manager.get_current_prompt()
-    
+
     st.sidebar.write(f"Available prompts: {prompts}")
     st.sidebar.write(f"Current prompt: {current_prompt}")
 
     # Load current content
     if current_prompt:
-        current_content = load_file_directly(os.path.join(os.path.dirname(__file__), 'prompts', f"{current_prompt}.txt"))
+        current_content = load_file_directly(
+            os.path.join(os.path.dirname(__file__), 'prompts', f"{current_prompt}.txt"))
         st.sidebar.write(f"Loaded content length: {len(current_content) if current_content else 0}")
         st.sidebar.write(f"First 100 chars: {current_content[:100] if current_content else 'empty'}")
     else:
@@ -36,13 +39,13 @@ def main():
     # Sidebar with prompt list and controls
     with st.sidebar:
         st.header("Prompts")
-        
+
         # New prompt button
         if st.button("➕ New Prompt"):
             current_prompt = ""
             current_content = ""
             st.rerun()
-        
+
         # List all prompts
         for prompt in prompts:
             col1, col2 = st.columns([0.7, 0.3])
@@ -86,7 +89,8 @@ def main():
             if not prompt_name:
                 st.error("Please enter a prompt name")
             else:
-                with open(os.path.join(os.path.dirname(__file__), 'prompts', f"{prompt_name}.txt"), 'w', encoding='utf-8') as f:
+                with open(os.path.join(os.path.dirname(__file__), 'prompts', f"{prompt_name}.txt"), 'w',
+                          encoding='utf-8') as f:
                     f.write(prompt_content)
                 if prompt_name != current_prompt:
                     prompt_manager.set_current_prompt(prompt_name)
@@ -100,6 +104,7 @@ def main():
     # Show the same content in a different way
     st.write("Content preview:")
     st.code(prompt_content)
+
 
 if __name__ == "__main__":
     main()

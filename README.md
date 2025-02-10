@@ -5,6 +5,9 @@ A powerful Streamlit-based web application that serves as an AI content generati
 ## Features
 
 - Interactive chat interface for content generation
+- Support for multiple AI models:
+  - OpenAI models
+  - Anthropic Claude 3.5 models (Sonnet and Haiku)
 - Custom prompt editing capabilities
 - Integration with multiple data sources:
   - YouTube integration:
@@ -50,7 +53,11 @@ playwright install
 
 3. Set up environment variables:
 - Copy `.env-example` to `.env`
-- Add your API keys and configuration settings
+- Add your API keys and configuration settings:
+  ```
+  OPENAI_API_KEY=your_openai_api_key
+  ANTHROPIC_API_KEY=your_anthropic_api_key
+  ```
 
 ## Usage
 
@@ -67,7 +74,9 @@ streamlit run app.py
 
 2. Access the web interface through your browser (typically at `http://localhost:8501`)
 
-3. Use the chat interface to interact with the AI assistant
+3. Use the chat interface to interact with the AI assistant:
+   - Select your preferred model (OpenAI or Claude 3)
+   - Start chatting and use available tools for content generation
 
 4. Access the Prompt Editor through the "Edit Prompt" button to customize the agent's behavior
 
@@ -78,6 +87,7 @@ streamlit run app.py
 - `services/` - Core functionality and tools
   - `agent_tools/` - Custom tools for web scraping and data retrieval
   - `prompts/` - System prompts and configurations
+  - `utils/` - Utility functions for text processing and token management
 - `requirements.txt` - Python dependencies
 - `Makefile` - Build and development commands
 
@@ -86,6 +96,7 @@ streamlit run app.py
 Key dependencies include:
 - `langchain` - For AI model integration and chains
 - `openai` - OpenAI API integration
+- `anthropic` - Anthropic Claude API integration
 - `streamlit` - Web interface
 - `playwright` - Web scraping capabilities
 - `youtube-search` - YouTube data retrieval
@@ -99,21 +110,6 @@ Key dependencies include:
 3. Commit your changes
 4. Push to the branch
 5. Create a new Pull Request
-
-## Development
-
-### Cleaning up
-
-To clean temporary files and caches:
-```bash
-make clean
-```
-
-This will remove:
-- Python cache files (__pycache__, .pyc, .pyo, .pyd)
-- Test cache (.pytest_cache)
-- Coverage data
-- System files (.DS_Store)
 
 ## License
 

@@ -1,14 +1,14 @@
 from langchain_core.tools import BaseTool
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Union
 from langchain.docstore.document import Document
 import asyncio
 from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeout
 
 
 class RetrieveDataArgs(BaseModel):
-    web_links: List[str] = Field(...,
-                                description="The web links to be scraped. Make sure that their format is correct.")
+    web_links: Union[List[str], str] = Field(...,
+                                description="The web links to be scraped. Can be a single URL or a list of URLs. Make sure that their format is correct.")
 
 
 class AsyncWebScraper(BaseTool):
@@ -101,17 +101,34 @@ class AsyncWebScraper(BaseTool):
                 await context.close()
                 await browser.close()
 
-    async def _arun(self, web_links: List[str]) -> List[str]:
-        # Process URLs concurrently
-        async def process_url(url: str) -> str:
-            try:
-                return await self._scrape_with_playwright(url)
-            except Exception as e:
-                return f"Error processing {url}: {str(e)}"
+    async def _arun(self, web_links: Union[List[str], str]) -> List[Document]:
+        """Run web scraping asynchronously.
+        
+        Args:
+            web_links: Single URL or list of URLs to scrape
+            
+        Returns:
+            List of Document objects containing scraped content
+        """
+        # Convert single URL to list if necessary
+        if isinstance(web_links, str):
+            web_links = [web_links]
+            
+        tasks = []
+        for url in web_links:
+            tasks.append(self._scrape_with_playwright(url))
 
-        tasks = [process_url(url) for url in web_links]
-        results = await asyncio.gather(*tasks)
-        return results
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        documents = []
+
+        for url, result in zip(web_links, results):
+            if isinstance(result, Exception):
+                print(f"Error scraping {url}: {str(result)}")
+                continue
+            if result:
+                documents.append(Document(page_content=result, metadata={"source": url}))
+
+        return documents
 
     def _run(self, query: str) -> str:
         raise NotImplementedError("This tool only supports async execution")
