@@ -42,9 +42,22 @@ def get_current_prompt() -> Optional[str]:
 
 def set_current_prompt(name: str) -> None:
     """Sets current prompt in config"""
-    config = {'current_prompt': name}
-    with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
-        json.dump(config, f, indent=2)
+    try:
+        # Read existing config
+        if os.path.exists(CONFIG_FILE):
+            with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
+                config = json.load(f)
+        else:
+            config = {}
+        
+        # Update only the current_prompt field
+        config['current_prompt'] = name
+        
+        # Write back the entire config
+        with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
+            json.dump(config, f, indent=2)
+    except (json.JSONDecodeError, FileNotFoundError) as e:
+        print(f"Error updating prompt config: {e}")
 
 
 def load_prompt(name: str) -> Optional[str]:
