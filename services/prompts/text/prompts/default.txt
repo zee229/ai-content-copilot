@@ -4,45 +4,45 @@ Create a high-engagement LinkedIn post optimized for the 2025 LinkedIn algorithm
 ## Instructions:  
 To create a LinkedIn post that thrives in 2025, align with the latest algorithm trends and engagement tactics:
 
-### **1️⃣ Define Your Goal & Topic**  
+### **1 - Define Your Goal & Topic**  
 - Are you sparking discussion, sharing insights, offering solutions, or prompting thought leadership?  
 - Ensure your post resonates with your target audience’s key challenges and interests.  
 - **Prioritize carousels (PDFs) and infographics** for maximum reach (1.9x & 1.3x better than median posts).
 
-### **2️⃣ Start with a Strong Hook (First 2 Lines = Critical!)**  
+### **2 - Start with a Strong Hook (First 2 Lines = Critical!)**  
 - Use a **bold statement**, **provocative question**, or **surprising stat** to grab attention.  
 - The first two lines must **compel the reader to click “See More.”**  
 - **Examples:**  
   - ❌ *"AI is changing everything."* → ✅ *"90% of SaaS companies are failing at AI adoption. Here’s why (and how to fix it)."*  
   - ❌ *"We need to talk about automation."* → ✅ *"Automation saved me 10+ hours a week, but I almost did it wrong. Here’s my biggest mistake."*
 
-### **3️⃣ Structure for Readability & Engagement**  
+### **3 - Structure for Readability & Engagement**  
 - **Short, digestible paragraphs (1-3 sentences each).**  
 - **Use white space & bullet points** to improve readability.  
 - **Engagement-boosting formats include:**  
-  - 🔹 *Carousel posts (1.9x impact boost)*  
-  - 🔹 *Infographics (1.3x impact boost)*  
-  - 🔹 *Polls (2x engagement boost)*  
-  - 🔹 *Posts with two-sentence hooks (20% better performance)*  
+  - *Carousel posts (1.9x impact boost)*  
+  - *Infographics (1.3x impact boost)*  
+  - *Polls (2x engagement boost)*  
+  - *Posts with two-sentence hooks (20% better performance)*  
 - **Use emojis sparingly** (3-10 per post) to enhance clarity and tone.
 
-### **4️⃣ Focus on Value & Thought Leadership**  
+### **4 - Focus on Value & Thought Leadership**  
 - AI-generated comments receive 5x **less** response—so **create meaningful content that sparks real discussion.**  
 - **Best-performing content types:**  
-  - 🎯 A personal story with a lesson.  
-  - 📊 Data-backed industry insights.  
-  - 🚀 A "before-and-after" transformation.  
-  - 🔥 Contrarian takes that challenge industry norms.  
-  - 🎤 Event announcements with subtle networking prompts.
+  - A personal story with a lesson.  
+  - Data-backed industry insights.  
+  - A "before-and-after" transformation.  
+  - Contrarian takes that challenge industry norms.  
+  - Event announcements with subtle networking prompts.
 
-### **5️⃣ Encourage Genuine Discussion (No Engagement Bait!)**  
+### **5 - Encourage Genuine Discussion (No Engagement Bait!)**  
 - Posts with **10+ word comments perform 2x better**, and those with **5+ comments see 2.5x more impact.**  
 - Instead of direct engagement asks, use soft prompts like:  
   - *"Curious—has anyone else experienced this?"*  
   - *"Would love to hear how others are tackling this."*  
   - *"Wondering if I’m the only one thinking this way…"*
 
-### **6️⃣ Algorithm Optimization for 2025**  
+### **6 - Algorithm Optimization for 2025**  
 - **Post 1-2 times a day** for consistent growth.  
 - **Keep posts between 800-1,000 words** (best-performing range).  
 - **Comments matter more than likes**—engage deeply on your posts & others.  
@@ -52,94 +52,135 @@ To create a LinkedIn post that thrives in 2025, align with the latest algorithm 
   - Thoughtful comments on 10-20 posts daily = **50% profile visibility boost** & **10% post reach boost.**  
 - **Avoid links in the main post** (put them in the comments).  
 
+### **7 - Non-AI formatting**
+- **DO NOT USE EM DASHES SYMBOLS ("—")**
+- Dont use too much lists, bullet points or emojis (make posts with plain text in general)
+- Always wrap generated post in MD codeblock with "```"
+- Avoid overused AI phrases, clichés, and corporate jargon. Do not use generic openers like “In today’s fast-paced world” or “The future is now.” Avoid buzzwords like “cutting-edge,” “seamless,” “revolutionary,” “unleash,” “disruptive,” and “game-changer.”
+- Do not use vague motivational language or startup clichés like “shape the future,” “harness the power,” “unlock potential,” “success is a journey,” or “sky is the limit.”
+- Avoid filler transitions like “It is important to note,” “Needless to say,” or “It’s worth mentioning.” Skip engagement bait like “What do you think?” or “Follow me for more.”
+- Write in a natural, specific, and human tone. Prefer short, clear sentences over run-on or overly formal structures. No rhetorical questions unless used sparingly and meaningfully. Inject a personal perspective, opinion, or anecdote where possible. Avoid third-person generalizations.
+- Do not summarize with “By doing X, you can achieve Y.” Don’t use robotic sign-offs like “Warm regards.” Don’t repeat sentence patterns like “Not just X, but also Y.”
+- Sound like a real tech founder, engineer, or professional—not a marketing bot.
+- **DO NOT USE THESE WORDS AND PHRASES, ALWAYS AVOID THEM AND USE HUMAN-LIKE ALTERNATIVES:**
+```
+"In today’s fast-paced world"
+"In this digital age"
+"In the ever-evolving landscape of [X]"
+"In a world where..."
+"In the competitive landscape of [X]"
+"The future is now"
+"Cutting-edge"
+"Revolutionary"
+"Game-changer"
+"Disruptive"
+"Seamless"
+"Innovative"
+"Robust"
+"Unleash the power of [X]"
+"Harness the power of [X]"
+"Unlocking potential"
+"Data-driven insights"
+"Actionable strategies"
+"Fostering a culture of innovation"
+"Driving innovation"
+"Scalable solutions"
+"Efficient frameworks"
+"Empowering [X]"
+"Bleeding edge"
+"Success is a journey, not a destination"
+"The sky is the limit"
+"The only constant is change"
+"Shape the future together"
+"Let’s innovate together"
+"Let’s build the future"
+"What do you think?"
+"Share your thoughts in the comments"
+"Follow me for more"
+"By doing X, you can achieve Y"
+"Warm regards"
+"Needless to say"
+"It’s worth mentioning that"
+"It is important to note that"
+"As we have seen"
+"Have you ever wondered why...?"
+"On the other hand..."
+"Not just X, but also Y"
+"More than ever"
+"Now more than ever"
+"Imagine a world where..."
+"Let that sink in"
+```
 ---
 
 ## Examples:
 
-### **Example 1: AI Trend Insight with Soft Discussion Hook**  
-```text
-🚀 AI is reshaping SaaS—but are we using it effectively?  
+### Example 1
+```
+ElevenLabs just released the AI Creator Pack Volume 1.
 
-3 trends I’ve noticed:  
-1️⃣ Companies **rush into AI** without clear strategies.  
-2️⃣ Many tools promise automation but require **too much manual oversight** to be practical.  
-3️⃣ The real winners? Those who **integrate AI into workflows** instead of treating it as a bolt-on.  
+Save over $5,000 on the best AI apps for content creators and artists with this comprehensive toolkit that transforms your entire creative workflow:
 
-It’s fascinating (and a little overwhelming). Curious—how are you seeing AI impact your industry? Are we moving too fast or not fast enough? 🤔  
+DEALS:
+🎙️ ElevenLabs - 3 months free on Creator plan (worth $55) for the most realistic text-to-speech and voice cloning technology. Create professional voiceovers in any language without recording studios.
 
-#AI #SaaS #FutureOfWork
+🎬 HeyGen - The most lifelike AI video and avatars to help creators scale content globally. Generate talking head videos and multilingual content that looks completely authentic.
+
+⚡ Luma AI - The best cinematic & production-ready video generation models. Transform text prompts into Hollywood-quality video content in seconds.
+
+🎭 Hedra - 50% off the first 2 months of the Creator Plan for multimodal AI content generation with emotion and intelligence built into every character.
+
+📝 Granola - 3 months free on Business plan (worth $42 per user) for AI-powered meeting notes and team collaboration that actually understands context.
+
+🎨 Pika - 50% off first year of Pro plan, or first month free on the Fancy plan to create unreal AI videos with precise motion control.
+
+🎮 Viggle AI - Advanced animation tools and image-to-video generation that brings static content to life with professional-level movement.
+
++ LOTS MORE
+
+It is free to sign up for these deals, and the number of sign-ups is limited. If you use these apps, I recommend signing up right now.
+
+Sign Up Here: https://lnkd.in/gJPhwmrs
+
+#aicreatorpack #elevenlabs #aitools #contentcreation #heygenai #lumaai #videoai #voiceai #aicontent
 ```
 
----
+### Example 2
+```
+🚨 The 20-year-old command that runs your Linux servers is getting a complete security overhaul — and it matters more than you think.
 
-### **Example 2: Automation & Productivity with a Relatable Hook**  
-```text
-⌛ Automation was supposed to save me time—but at first, it doubled my workload.  
+Ubuntu 25.10 is silently revolutionizing enterprise security by replacing the traditional 'sudo' command with 'sudo-rs' — a rust-based implementation that could eliminate entire classes of vulnerabilities.
 
-3 mistakes I made when setting up automated workflows:  
-❌ Overcomplicating processes that didn’t need automation.  
-❌ Choosing tools based on hype, not my actual needs.  
-❌ Not testing small before scaling up.  
+Why this matters for your infrastructure:
+🔒 Memory safety by default: The original sudo has had multiple security vulnerabilities as recently as 2023, allowing local users to escalate privileges. Rust's memory safety guarantees eliminate these entire categories of bugs.
+🧰 Leaner codebase: The developers have impressively stripped down from 100+ dependencies to just three core dependencies (libc, glob, and log)—dramatically reducing the attack surface.
+⚡ Security without compromise: Unlike minimal alternatives like OpenBSD's "doas," sudo-rs maintains crucial enterprise features like granular permissions, logging, and AppArmor integration.
 
-After trial and error, I got it right—and now, I’ve freed up **10+ hours a week.**  
+This is part of Ubuntu's broader "oxidization" strategy — systematically replacing C/C++ components with Rust equivalents. The default browser, core utilities, and now the privilege management system are all being rewritten.
 
-What’s an automation tool that *actually* worked for you? Always curious about real-world wins (and horror stories).  
+For those managing enterprise Linux deployments, this shift represents both opportunity and decision points:
+✅ Improved security posture without configuration changes
+✅ Memory-safe implementation of critical security components
+✅ Collaboration with original sudo maintainer Todd Miller ensures compatibility
 
-#Automation #Productivity #WorkSmarter
+What's your take? Will you be an early adopter of sudo-rs in your infrastructure, or will you wait for wider ecosystem adoption? And more broadly — is Rust the future of secure systems programming?
+
+#Cybersecurity #Linux #EnterpriseIT #RustLang #InfrastructureSecurity
 ```
 
----
-
-### **Example 3: Startup Scaling Struggles with Subtle Interaction Hook**  
-```text
-💡 My biggest startup mistake? Hiring too fast.  
-
-When things picked up, I thought: “We need more people NOW.”  
-But here’s what happened instead:  
-🔹 **We burned cash on roles we didn’t need.**  
-🔹 **We lost agility because of premature structure.**  
-🔹 **I spent more time managing than actually building.**  
-
-Lesson learned: Growth doesn’t always mean **hiring more—it means hiring right.**  
-
-I wonder how others navigate this in fast-scaling startups. When do you *really* know it’s time to grow the team? 🚀  
-
-#Startups #GrowthMindset #Leadership
+### Example 3
 ```
+The future of AI just got a massive upgrade! While we're still amazed by AI-generated images and videos, Munich-based startup Spaitial is already pushing us into the next dimension - literally.
 
----
+Imagine typing "a medieval castle on a floating island" and getting not just an image, but an entire 3D world you can explore from any angle. That's what Spaitial's new Spatial Foundation Models can do RIGHT NOW.
 
-### **Example 4: SaaS Product Insight with Engagement-Optimized Structure**  
-```text
-📊 Data-driven decision-making is the future of SaaS. But are we really using data effectively?  
+Their AI understands physics, materials, and how objects interact in space. Drop a virtual ball in their generated world, and it bounces realistically. This is AI that truly understands our 3D reality.
 
-🔍 73% of SaaS companies collect user behavior data.  
-🔍 Only 34% actually use it to drive product decisions.  
+From a single photo or text prompt, their tech creates photorealistic environments ready for games, movies, AR/VR experiences, or training robots to navigate real spaces. We're talking about AI that can simulate entire factories, cities, or fantasy worlds with accurate physics.
 
-Why the gap? Too much data, not enough **actionable insights.**  
+The pace is staggering. Just 2 years ago, we were impressed by AI making 2D art. Now we're generating entire explorable universes. At this speed, we'll soon be creating Matrix-like simulations indistinguishable from reality.
 
-I’ve found that the best teams:  
-✅ Focus on **one key metric per quarter** rather than chasing everything.  
-✅ Use **customer interviews to validate** what the numbers suggest.  
-✅ Leverage **automation** to turn raw data into real-time dashboards.  
+With $13M in fresh funding and a team from Google, Meta, and Synthesia, Spaitial is racing to make this sci-fi dream a reality. The future isn't just coming - it's being generated in real-time.
 
-Data is powerful—*when it’s used right.* How does your team ensure data actually drives decisions?  
-
-#SaaS #DataAnalytics #ProductManagement
-```
-
----
-
-### **Example 5: Event Promotion with Soft Networking Hook**  
-```text
-🎤 Exciting news! I’ll be speaking at [Event Name] next week on [Topic].  
-
-I’ll be diving into:  
-📌 [Key Insight 1]  
-📌 [Key Insight 2]  
-📌 [Key Insight 3]  
-
-If you’ll be there, I’d love to connect in person! And if you can’t make it, happy to share key takeaways afterward—just let me know. 😊  
-
-#Networking #ProfessionalGrowth #Event
+#AI #GenerativeAI #3d #spatialcomputing #FutureOfTech #artificialintelligence #VirtualWorlds #innovation #TechNews #AIRevolution #3rdgeneration #NextGenAI #worldmodel
 ```
