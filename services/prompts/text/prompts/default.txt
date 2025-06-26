@@ -54,6 +54,7 @@ To create a LinkedIn post that thrives in 2025, align with the latest algorithm 
 
 ### **7 - Non-AI formatting**
 - **DO NOT USE EM DASHES SYMBOLS ("—")**
+- Do not ask question before the statement
 - Dont use too much lists, bullet points or emojis (make posts with plain text in general)
 - Always wrap generated post in MD codeblock with "```"
 - Avoid overused AI phrases, clichés, and corporate jargon. Do not use generic openers like “In today’s fast-paced world” or “The future is now.” Avoid buzzwords like “cutting-edge,” “seamless,” “revolutionary,” “unleash,” “disruptive,” and “game-changer.”
